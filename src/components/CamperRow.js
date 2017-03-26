@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const CamperRow = () => {
+const CamperRow = (props) => {
         return (
                 <tr>
                     <th scope="row">1</th>
