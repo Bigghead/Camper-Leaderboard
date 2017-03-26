@@ -34,8 +34,8 @@ class Leaderboard extends Component {
                 .map((user, index) => {
                 return (
                      <tr key={user.username}>
-                    <th scope="row">{index + 1}</th>
-                    <td><img src={user.img} className='user-image' alt=""/> <a>{user.username}</a></td>
+                    <td scope="row">{index + 1}</td>
+                    <td><img src={user.img} className='user-image' alt=""/> <a href={`https://www.freecodecamp.com/` + user.username}>{user.username}</a></td>
                     <td>{user.recent}</td>
                     <td>{user.alltime}</td>
                 </tr>
@@ -51,7 +51,7 @@ class Leaderboard extends Component {
                 return (
                      <tr key={index}>
                     <th scope="row">{index}</th>
-                    <td><img src={user.img} className='user-image' alt=""/> <a>{user.username}</a></td>
+                    <td><img src={user.img} className='user-image' alt=""/> <a href={`https://www.freecodecamp.com/` + user.username}>{user.username}</a></td>
                     <td>{user.recent}</td>
                     <td>@{user.alltime}</td>
                 </tr>
@@ -81,12 +81,11 @@ class Leaderboard extends Component {
         return (
             <div className='container-fluid'>
 
-
                 <div className="well">
-
+                    
                     <table className="table table-inverse">
                         <thead>
-                            <tr>
+                            <tr className='text-center'>
                                 <th>#</th>
                                 <th>Camper Name</th>
                                 <th> <a onClick={this.togglePast30}>Points in past 30 days</a></th>

@@ -22,12 +22,17 @@
   background-color: #673ab7 !important;
 }
 
+
 .user-image{
   height: 50px;
 }
 
 tr{
   height: 60px;
+}
+
+a:hover{
+  cursor: pointer;
 }
 
 @keyframes App-logo-spin {
